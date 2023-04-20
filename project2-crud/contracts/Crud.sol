@@ -9,7 +9,7 @@ contract Crud{
 
     Player[] public player; //luu tru player, mang y nghia 1 kieu du lieu, luu tru duoi dang array
 
-    uint256 public nextId;
+    uint256 public nextId = 1;
 
     function createPlayer(string memory name) public {
         player.push(Player(nextId, name)); //push vao array
@@ -37,5 +37,6 @@ contract Crud{
                 return i;
             }
         }
+        revert("Player does not exist");
     }
 }
