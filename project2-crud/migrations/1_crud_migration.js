@@ -1,5 +1,5 @@
-const Crud = artifacts.require('Crud');
+const Crud = artifacts.require("Crud");
 
-module.exports = function(deploy){
+module.exports = function(deployer){
     deployer.deploy(Crud);
 }
